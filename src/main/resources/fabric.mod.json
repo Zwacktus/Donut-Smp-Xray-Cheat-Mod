@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "donut-searcher",
+	"version": "${version}",
+	"name": "Donut Searcher",
+	"description": "Highlights selected blocks in already loaded chunks within a configurable radius on the configured world seed.",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/donut-searcher/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": ["net.zwacktus.searcher.DonutSearcherClient"],
+		"main": ["net.zwacktus.searcher.DonutSearcher"],
+		"fabric-datagen": [
+			"net.zwacktus.searcher.DonutSearcherDataGenerator"
+		]
+	},
+	"mixins": [
+		"donut-searcher.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
